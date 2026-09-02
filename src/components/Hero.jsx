@@ -6,7 +6,7 @@ import {
 export default function Hero({ blok }) {
 	return (
 		<section
-			className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white px-8 py-12 items-center"
+			className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white px-8 py-12 items-center border-b border-gray-100"
 			{...storyblokEditable(blok)}
 		>
 			<div>
