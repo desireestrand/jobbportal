@@ -1,51 +1,44 @@
-# Modern Job Portal
+# Job Portal
 
-A job platform built with Next.js (App Router) and Storyblok Headless CMS. This application features dynamic content rendering, real-time filtering via datasources, and full-text search capabilities.
+A full-scale web application designed to help users browse and search for open job positions, featuring dynamic filtering and department categorization. Developed using Next.js and Storyblok CMS.
 
-## Live Demo & Repository
+## Live Demo
+[https://my-job-project.vercel.app](https://my-job-project.vercel.app)
 
-* Live Application: [View on Vercel]()
-* Source Code: [View on GitHub](https://github.com/desireestrand/jobbportal)
+## Features
+* **Job Post Management:** Fully structured custom Content Type (`job-post`) handling titles, summaries, locations, RichText content, and publication dates.
+* **Dynamic List View:** Displays available job listings with department tags, summaries, and direct links to detail views.
+* **Detailed Job Views:** Dedicated views for each posting (`/jobs/[slug]`) rendering rich text content with robust error handling for invalid routes.
+* **Advanced Toolbar & Filtering:** A dedicated toolbar block supporting department filtering via Storybloks Datasource (`job-departments`) and real-time free-text search.
+* **Combined State Handling:** Synchronized query parameters allowing users to filter by department and search simultaneously without losing active filters.
 
-## Technology Stack
+## Technical Implementation
+Key technical highlights include:
+* **Headless CMS Architecture:** Leveraging Storyblok's Delivery API, Datasources, and Nestable Blocks for modular content management.
+* **Server-Driven Routing & State:** Utilizing Next.js App Router and `searchParams` to handle server-side filtering and search queries seamlessly.
+* **Global Layout Integration:** Consistent global headers and footers across all pages.
 
-* Frontend: Next.js (App Router, Server Components)
-* CMS & Content Management: Storyblok (Headless CMS)
-* Styling & UI: Tailwind CSS
-* Deployment & Hosting: Vercel
+## Tech Stack
+* **Frontend:** Next.js (App Router, Server & Client Components)
+* **CMS:** Storyblok CMS (Content Types, Datasources, RichText)
+* **Styling:** CSS / Modern Styling
+* **Deployment & Hosting:** Vercel
 
-## Key Features
-
-* Headless Architecture: Fully decoupled frontend consuming structured content models (job-post) and datasources from Storyblok.
-* Dynamic Routing & Detail Views: Dedicated, SEO-friendly detail pages (/jobs/[slug]) powered by rich-text rendering and robust 404 fallback handling.
-* Advanced Toolbar & Filtering: 
-  * Department-based filtering utilizing Storyblok datasources and filter_query.
-  * Real-time free-text search functionality using search_term.
-  * URL-state persistence (GET parameters ensure filters and search queries work seamlessly together).
-* Modular Component Design: Reusable nested blocks for toolbars, headers, footers, and listing overviews.
-
-## Getting Started
-
-To run this project locally, follow these steps:
-
-1. Clone the repository:
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-   cd YOUR-REPO
-
-2. Install dependencies:
+## Installation & Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/job-portal.git
+   ```
+2. **Install dependencies:**
+   ```bash
    npm install
-
-3. Configure environment variables:
-   Create a .env.local file in the root directory and add your Storyblok Delivery API token:
+   ```
+3. **Configure environment variables:**
+   Create a `.env.local` file in the root directory and add your token:
+   ```env
    STORYBLOK_DELIVERY_API_TOKEN=your_token_here
-
-4. Run the development server:
+   ```
+4. **Start the development server:**
+   ```bash
    npm run dev
-
-5. Open http://localhost:3000/ in your browser.
-
-## Architecture Overview
-
-* src/app/jobs/page.jsx – Handles index data fetching and passes search parameters down to components.
-* src/app/jobs/[slug]/page.jsx – Dynamically fetches and renders individual job postings.
-* src/components/ – Modular Storyblok components (Job listings, toolbars, content blocks).
+   ```
