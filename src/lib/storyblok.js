@@ -3,6 +3,7 @@ import DepartmentFilter from '@/components/DepartmentFilter';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import JobCategoryLinks from '@/components/JobCategoryLinks';
 import JobList from '@/components/JobList';
 import JobPost from '@/components/JobPost';
 import NavLink from '@/components/NavLink';
@@ -26,6 +27,7 @@ export const getStoryblokApi = storyblokInit({
 		"department-filter": DepartmentFilter,
 		hero: Hero,
 		cta: Cta,
+		"job-category-links": JobCategoryLinks,
 		},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */

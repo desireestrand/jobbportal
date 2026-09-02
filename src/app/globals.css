@@ -68,3 +68,9 @@ body {
     font-style: italic;
     margin: 1rem 0;
 }
+
+@layer base {
+  html {
+    overflow-y: scroll;
+  }
+}
