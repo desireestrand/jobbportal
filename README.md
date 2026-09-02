@@ -3,7 +3,7 @@
 A full-scale web application designed to help users browse and search for open job positions, featuring dynamic filtering and department categorization. Developed using Next.js and Storyblok CMS.
 
 ## Live Demo
-[https://my-job-project.vercel.app](https://my-job-project.vercel.app)
+[https://my-job-project.vercel.app](https://jobbportal-six.vercel.app/)
 
 ## Features
 * **Job Post Management:** Fully structured custom Content Type (`job-post`) handling titles, summaries, locations, RichText content, and publication dates.
