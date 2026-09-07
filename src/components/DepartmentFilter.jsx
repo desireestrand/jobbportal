@@ -16,7 +16,6 @@ export default async function DepartmentFilter({
 
 	return (
 		<form
-			action="/jobs"
 			method="get"
 			className="flex flex-col gap-1.5"
 			{...storyblokEditable(blok)}
@@ -57,7 +56,7 @@ export default async function DepartmentFilter({
 					</svg>
 				</div>
 
-				<input type="hidden" name="q" value={query} />
+				{query && <input type="hidden" name="q" value={query} />}
 
 				<button
 					type="submit"

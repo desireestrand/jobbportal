@@ -3,7 +3,6 @@ import { storyblokEditable } from '@storyblok/react';
 export default function SearchBar({ blok, query = '', department = '' }) {
 	return (
 		<form
-			action="/jobs"
 			method="get"
 			className="flex flex-col gap-1.5"
 			{...storyblokEditable(blok)}
@@ -40,7 +39,9 @@ export default function SearchBar({ blok, query = '', department = '' }) {
 					className="flex-1 h-full border-none outline-none text-sm text-gray-700 placeholder:text-gray-400 bg-transparent"
 				/>
 
-				<input type="hidden" name="department" value={department} />
+				{department && (
+					<input type="hidden" name="department" value={department} />
+				)}
 
 				<button
 					type="submit"
